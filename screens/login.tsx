@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {StyleSheet, View, Text} from "react-native";
 // icons
 import {AntDesign} from '@expo/vector-icons';
-import {TextInput} from "@react-native-material/core";
+import {Button, TextInput} from "@react-native-material/core";
 // interfaces
 import {ILoginUserData} from "../utils/interfaces";
 
@@ -39,6 +39,17 @@ export default function Login() {
                     style={styles.input}
                     variant={"standard"}
                 />
+                <Button
+                    style={styles.button}
+                    title={"Login"}
+                    variant={"contained"}
+                />
+                <Text
+                    style={styles.smallText}
+                >
+                    Already have an account?
+                    Login here
+                </Text>
             </View>
         </View>
     )
@@ -67,5 +78,13 @@ const styles = StyleSheet.create({
     },
     input: {
         marginTop: 20,
+    },
+    button: {
+        backgroundColor: "#3f50b5",
+        marginTop: 28,
+    },
+    smallText: {
+        marginTop: 14,
+        textAlign: "center",
     },
 });
